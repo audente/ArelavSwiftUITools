@@ -16,37 +16,12 @@ let package = Package(
         .library(
             name: "ArelavSwiftTools",
             targets: ["ArelavSwiftTools"]
-        ),  
-        .iOSApplication(
-            name: "ArelavTools",
-            targets: ["ArelavAppModule"],
-            displayVersion: "1.0",
-            bundleVersion: "1",
-            appIcon: .placeholder(icon: .images),
-            accentColor: .presetColor(.blue),
-            supportedDeviceFamilies: [
-                .pad,
-                .phone
-            ],
-            supportedInterfaceOrientations: [
-                .portrait,
-                .landscapeRight,
-                .landscapeLeft,
-                .portraitUpsideDown(.when(deviceFamilies: [.pad]))
-            ]
         )
     ],
     targets: [
         .target(
             name: "ArelavSwiftTools",
             dependencies: []
-        ),
-        .executableTarget(
-            name: "ArelavAppModule",
-            dependencies: ["ArelavSwiftTools"],
-            swiftSettings: [
-                .enableUpcomingFeature("BareSlashRegexLiterals")
-            ]
         )
     ]
 )
