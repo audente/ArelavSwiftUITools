@@ -8,7 +8,7 @@ import PackageDescription
 import AppleProductTypes
 
 let package = Package(
-    name: "ArelavTools",
+    name: "ArelavSwiftUITools",
     platforms: [
         .iOS("18.1")
     ],
@@ -20,7 +20,7 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "ArelavSwiftTools",
+            name: "ArelavSwiftUITools",
             dependencies: []
         )
     ]

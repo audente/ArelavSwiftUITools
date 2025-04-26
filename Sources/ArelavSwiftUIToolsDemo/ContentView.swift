@@ -1,18 +1,20 @@
 import SwiftUI
-import ArelavSwiftTools
+import ArelavSwiftUITools
+
 
 struct ContentView: View {
     @State var name: String = "World"
     
     var body: some View {
-        VStack {
+        VStack(spacing: 30) {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
             Text("Hello, \(name)!")
-            Button("Change") {
-                name = GetText()
-            }
+            StyledButton(title: "Share", systemImage: "icloud.and.arrow.up", action: {
+                print(" » Publish: \(Bundle.main.bundleIdentifier ?? "<Empty>")")
+            })
+            
         }
     }
 }
