@@ -8,18 +8,18 @@ import PackageDescription
 import AppleProductTypes
 
 let package = Package(
-    name: "ArelavTools",
+    name: "ArelavSwiftUITools",
     platforms: [
         .iOS("18.1")
     ],
     products: [
         .library(
-            name: "ArelavSwiftTools",
-            targets: ["ArelavSwiftTools"]
+            name: "ArelavSwiftUITools",
+            targets: ["ArelavSwiftUITools"]
         ),  
         .iOSApplication(
-            name: "ArelavTools",
-            targets: ["ArelavAppModule"],
+            name: "ArelavSwiftUIToolsDemo",
+            targets: ["ArelavSwiftUIToolsDemo"],
             displayVersion: "1.0",
             bundleVersion: "1",
             appIcon: .placeholder(icon: .images),
@@ -38,12 +38,12 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "ArelavSwiftTools",
+            name: "ArelavSwiftUITools",
             dependencies: []
         ),
         .executableTarget(
-            name: "ArelavAppModule",
-            dependencies: ["ArelavSwiftTools"],
+            name: "ArelavSwiftUIToolsDemo",
+            dependencies: ["ArelavSwiftUITools"],
             swiftSettings: [
                 .enableUpcomingFeature("BareSlashRegexLiterals")
             ]

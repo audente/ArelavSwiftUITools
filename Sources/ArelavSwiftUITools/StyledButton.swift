@@ -2,9 +2,15 @@
 import SwiftUI
 
 public struct StyledButton: View {
-    let title: String
-    let systemImage: String
-    let action: () -> Void
+    public let title: String
+    public let systemImage: String
+    public let action: () -> Void
+    
+    public init(title: String, systemImage: String, action: @escaping () -> Void) {
+        self.title = title
+        self.systemImage = systemImage
+        self.action = action
+    }
     
     public var body: some View {
         HStack {
