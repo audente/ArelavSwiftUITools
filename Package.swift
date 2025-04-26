@@ -14,8 +14,8 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "ArelavSwiftTools",
-            targets: ["ArelavSwiftTools"]
+            name: "ArelavSwiftUITools",
+            targets: ["ArelavSwiftUITools"]
         )
     ],
     targets: [
